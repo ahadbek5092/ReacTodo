@@ -1,6 +1,6 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import { useFormik } from "formik";
+
 function PersonForm(props) {
   const [upname, setupname] = useState(props.values.name);
   const [uplastname, setuplastname] = useState(props.values.lastname);
@@ -33,7 +33,7 @@ function PersonForm(props) {
       {/* <h3>{props.values.name}</h3>
       <h3>{upid}</h3> */}
       {props.values.id ? (
-        <form>
+        <form onSubmit={handleUpdate}>
           <input
             type="text"
             value={upname}
@@ -52,9 +52,7 @@ function PersonForm(props) {
             onChange={(e) => setupage(e.target.value)}
             // onChange={formik.handleChange}
           />
-          <button type="button" onClick={handleUpdate}>
-            update
-          </button>
+          <button type="submit">update</button>
         </form>
       ) : null}
     </>

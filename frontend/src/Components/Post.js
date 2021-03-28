@@ -58,7 +58,7 @@ function Post(props) {
         onChange={handleChange}
       /> */}
 
-      <Form onSubmit={formik.handleSubmit}>
+      <form onSubmit={formik.handleSubmit}>
         <Form.Row>
           {/* <Col>
             <Form.Control
@@ -104,7 +104,7 @@ function Post(props) {
             <Button type="submit">Add person</Button>
           </Col>
         </Form.Row>
-      </Form>
+      </form>
       <hr />
       <Table bordered hover variant="dark">
         <thead>
@@ -142,7 +142,6 @@ function Post(props) {
           </tbody>
         ))}
       </Table>
-      <h1>HELLO WORLDSSDF</h1>
     </>
   );
 }
